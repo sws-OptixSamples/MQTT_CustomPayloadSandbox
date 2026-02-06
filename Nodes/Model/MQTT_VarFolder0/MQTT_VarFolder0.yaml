@@ -1,0 +1,13 @@
+Name: MQTT_VarFolder0
+Id: g=b5cc3527aee3a54eb8a61c70e07de3a6
+Type: FolderType
+Children:
+- Name: PartCount
+  Id: g=2986aac4ce7fe623baf7e5e2d5d46bfd
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "000"
+- Name: PartNumber
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Motor_000"

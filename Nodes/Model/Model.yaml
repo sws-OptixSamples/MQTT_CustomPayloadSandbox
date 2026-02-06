@@ -1,0 +1,7 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- File: MQTT_VarFolder0/MQTT_VarFolder0.yaml
+- File: MQTT_VarFolder1/MQTT_VarFolder1.yaml
+- File: MQTT_VarFolder2/MQTT_VarFolder2.yaml
+- File: MQTT_VarFolder3/MQTT_VarFolder3.yaml

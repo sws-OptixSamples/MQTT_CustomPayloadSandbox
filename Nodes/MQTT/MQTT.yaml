@@ -1,0 +1,326 @@
+Name: MQTT
+Type: MQTTCategoryFolder
+Children:
+- Name: MQTTClient1
+  Type: MQTTClient
+  Children:
+  - Name: BrokerAddress
+    Type: PropertyType
+    DataType: String
+  - Name: BrokerPort
+    Type: PropertyType
+    DataType: UInt16
+    Value: 1883
+  - Name: ClientId
+    Type: PropertyType
+    DataType: String
+    Value: "not updated - run method ConfigMqttClient"
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: StatusEnum
+    ReferenceType: HasProperty
+    AccessLevel: Read
+  - Name: UserIdentityType
+    Type: BaseDataVariableType
+    DataType: UserIdentityTypeEnum
+  - Name: SSLTLSEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ValidateBrokerCertificate
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Class: Reference
+    Target: ns=9;i=12
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=44
+    Direction: Forward
+  - Name: MQTTPublisher_p0
+    Id: g=8efdc41d536fede4f1d86c1f9354ad75
+    Type: MQTTPublisher
+    Children:
+    - Name: SamplingMode
+      Type: PropertyType
+      DataType: SamplingModeEnum
+      Value: 2
+    - Name: Folder
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: Topic
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: QoS
+      Type: BaseDataVariableType
+      DataType: QoSLevelEnum
+      Value: 1
+    - Name: Retain
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PFEnabled
+      Type: PropertyType
+      DataType: Boolean
+    - Name: PayloadUpdateTimestamp
+      Type: BaseDataVariableType
+      DataType: DateTime
+      ReferenceType: HasProperty
+      AccessLevel: Read
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: SamplingPeriod
+      Type: PropertyType
+      DataType: Duration
+      Value: "0:00:00:05.0000000"
+    - Name: PFHeader
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: PFRecord
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+  - Name: MQTTPublisher_p1
+    Id: g=257ee3604734b4b1033da35107fde991
+    Type: MQTTPublisher
+    Children:
+    - Name: SamplingMode
+      Type: PropertyType
+      DataType: SamplingModeEnum
+      Value: 2
+    - Name: Folder
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder1"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: Topic
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: QoS
+      Type: BaseDataVariableType
+      DataType: QoSLevelEnum
+      Value: 1
+    - Name: Retain
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PFEnabled
+      Type: PropertyType
+      DataType: Boolean
+      Value: true
+    - Name: PayloadUpdateTimestamp
+      Type: BaseDataVariableType
+      DataType: DateTime
+      ReferenceType: HasProperty
+      AccessLevel: Read
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: SamplingPeriod
+      Type: PropertyType
+      DataType: Duration
+      Value: "0:00:00:05.0000000"
+    - Name: PFHeader
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"{\"Version\": \"1.0.1\", \"Timestamp\": \"{0}\", \"ObjectArrayName\": [#PFRecord]}"}
+        - Name: ns=3;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Format
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ReferenceType: HasParameter
+              Value: {"LocaleId":"en-US","Text":"{0:o}-4:00"}
+            - Name: ns=3;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../PayloadUpdateTimestamp"
+    - Name: PFRecord
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":" {\"Variable Name\": \"{0}\", \"Variable Value\": \"{1}\"},"}
+        - Name: ns=3;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Item}@BrowseName"
+        - Name: ns=3;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Item}@Value"
+  - Name: MQTTPublisher_p2
+    Id: g=8f1311a5a5de0958b2ab4f416b12e8f1
+    Type: MQTTPublisher
+    Children:
+    - Name: SamplingMode
+      Type: PropertyType
+      DataType: SamplingModeEnum
+      Value: 2
+    - Name: Folder
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder2"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+      - Name: ItemKind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: Topic
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: QoS
+      Type: BaseDataVariableType
+      DataType: QoSLevelEnum
+      Value: 1
+    - Name: Retain
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PFEnabled
+      Type: PropertyType
+      DataType: Boolean
+      Value: true
+    - Name: PayloadUpdateTimestamp
+      Type: BaseDataVariableType
+      DataType: DateTime
+      ReferenceType: HasProperty
+      AccessLevel: Read
+    - Name: Item
+      Type: Alias
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Objects/MQTT_CustomPayloadSandbox/Model/MQTT_VarFolder0/PartCount"
+    - Name: SamplingPeriod
+      Type: PropertyType
+      DataType: Duration
+      Value: "0:00:00:05.0000000"
+    - Name: PFHeader
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":"{\"Version\": \"1.0.1\", \"Timestamp\": \"{0}\", \"ObjectArrayName\": [#PFRecord]}"}
+        - Name: ns=3;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Format
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ReferenceType: HasParameter
+              Value: {"LocaleId":"en-US","Text":"{0:o}-4:00"}
+            - Name: ns=3;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../PayloadUpdateTimestamp"
+    - Name: PFRecord
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          Value: {"LocaleId":"en-US","Text":" {\"Count\": \"{0}\", \"PartNumber\": \"{1}\"},"}
+        - Name: ns=3;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Item}@Value"
+        - Name: ns=3;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Item}@BrowseName"

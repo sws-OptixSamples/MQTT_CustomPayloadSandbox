@@ -1,0 +1,8 @@
+Name: MQTT_VarFolder2
+Id: g=1573c9cb62940d89c0db788b9a868252
+Type: FolderType
+Children:
+- Name: Motor_200
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "200"
