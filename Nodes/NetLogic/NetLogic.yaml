@@ -8,7 +8,6 @@ Children:
   - Name: P3_Topic
     Type: BaseDataVariableType
     DataType: String
-    Value: "swsTopic3_1770391103"
   - Name: P3_QOS
     Type: BaseDataVariableType
     DataType: Int32

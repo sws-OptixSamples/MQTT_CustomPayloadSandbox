@@ -7,7 +7,6 @@ Children:
   - Name: BrokerAddress
     Type: PropertyType
     DataType: String
-    Value: "test.mosquitto.org"
   - Name: BrokerPort
     Type: PropertyType
     DataType: UInt16
@@ -15,7 +14,7 @@ Children:
   - Name: ClientId
     Type: PropertyType
     DataType: String
-    Value: "swsClient_1770391103"
+    Value: "not updated - run method ConfigMqttClient"
   - Name: Status
     Type: BaseDataVariableType
     DataType: StatusEnum
@@ -60,7 +59,6 @@ Children:
     - Name: Topic
       Type: BaseDataVariableType
       DataType: String
-      Value: "swsTopic0_1770391103"
     - Name: QoS
       Type: BaseDataVariableType
       DataType: QoSLevelEnum
@@ -118,7 +116,6 @@ Children:
     - Name: Topic
       Type: BaseDataVariableType
       DataType: String
-      Value: "swsTopic1_1770391103"
     - Name: QoS
       Type: BaseDataVariableType
       DataType: QoSLevelEnum
@@ -235,7 +232,6 @@ Children:
     - Name: Topic
       Type: BaseDataVariableType
       DataType: String
-      Value: "swsTopic2_1770391103"
     - Name: QoS
       Type: BaseDataVariableType
       DataType: QoSLevelEnum

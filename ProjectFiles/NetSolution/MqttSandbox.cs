@@ -36,13 +36,15 @@ public class MqttSandbox : BaseNetLogic
         var dataItem1 = dataFolder.Get("PartData301");
 
         // create a data item list from one of the custom data item classes
-        var dataItems = new List<MqttDataItem1>
+        var dataItems = new List<MqttDataItem2>
         {
             // add new data item for each item to publish
-            new MqttDataItem1
+            new MqttDataItem2
             {
-                Count = (string)dataItem1.GetVariable("Count").Value,
-                PartNumber = (string)dataItem1.GetVariable("PartNumber").Value
+                Name = (string)dataItem1.GetVariable("PartNumber").Value,
+                Value = (string)dataItem1.GetVariable("Count").Value,
+                Type = "String",
+                Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz")
             }
         };
 
@@ -55,12 +57,12 @@ public class MqttSandbox : BaseNetLogic
         };
 
         // create payload object from one of the custom payload classes
-        var payload = new MqttPayload1<MqttDataItem1>
+        var payload = new MqttPayload3<MqttDataItem2>
         {
             // what time format and/or UTC offset does your application require?
-            Version = "1.0.1",
-            Timestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz"),
-            ProcessedCount = dataItems
+            PublishTimestamp = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffzzz"),
+            PublishCount = dataItems.Count,
+            ObjectArrayName = dataItems
         };
 
         // serialize the config and payload objects to JSON strings
