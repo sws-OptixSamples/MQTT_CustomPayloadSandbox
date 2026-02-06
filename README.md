@@ -1,11 +1,11 @@
 # MQTT Custom Payload Sandbox
 
-This project demonstrates different payload configurations for the MQTT client in FactoryTalk Optix.
-There are (4) different payload configurations:
-0: standard payload with a folder of variables
-1: custom payload using folder variable values for tag name and value
-2: custom payload using folder variable value and browsename
-3: completely customized topic structure via NetLogic
+This project demonstrates different payload configurations for the MQTT client in FactoryTalk Optix.  
+There are (4) different payload configurations:  
+* 0: standard payload with a folder of variables
+* 1: custom payload using folder variable values for tag name and value  
+* 2: custom payload using folder variable value and browsename  
+* 3: completely customized topic structure via NetLogic  
 
 ![readmeImage](https://github.com/sws-OptixSamples/MQTT_CustomPayloadSandbox/blob/main/readmeImage.png?raw=true)
 
